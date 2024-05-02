@@ -1,5 +1,5 @@
 # Uncomment the imports below before you add the function code
-# import requests
+import requests
 import os
 from dotenv import load_dotenv
 
@@ -33,6 +33,8 @@ def analyze_review_sentiments(text):
     try:
         # Call get method of requests library with URL and parameters
         response = requests.get(request_url)
+        print("LOOOOOL2")
+        print(response.json())
         return response.json()
     except Exception as err:
         print(f"Unexpected {err=}, {type(err)=}")
